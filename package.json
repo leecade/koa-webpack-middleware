@@ -1,6 +1,6 @@
 {
   "name": "koa-webpack-middleware",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [
     "react",
     "hot",
@@ -19,7 +19,7 @@
   "scripts": {
     "lint": "standard | snazzy",
     "test": "npm run lint",
-    "build": "npm run lint && babel middleware --out-file lib/index.js",
+    "build": "npm run lint && babel -d lib/ middleware/",
     "prepublish": "npm run build"
   },
   "repository": {
