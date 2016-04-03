@@ -2,12 +2,12 @@
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-[webpack]() dev server middleware for use in [koa2]() with [HMR](http://webpack.github.io/docs/hot-module-replacement-with-webpack.html)(hot module replacement)
+[webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) for [koa2](https://github.com/koajs/koa/tree/v2.x) with [HMR](http://webpack.github.io/docs/hot-module-replacement-with-webpack.html)(hot module replacement) supports.
 
 ## Install
 
 ```sh
-npm install koa-webpack-middleware -D
+$ npm i koa-webpack-middleware -D
 ```
 
 ## Usage
@@ -66,14 +66,10 @@ app.use(hotMiddleware(compile, {
         new webpack.NoErrorsPlugin()
     ]
     ```
-
-    Occurence ensures consistent build hashes, hot module replacement is
-    somewhat self-explanatory, no errors is used to handle errors more cleanly.
-
 2. webpack `entry` configure
 
     ```sh
-    npm i eventsource-polyfill -D
+    $ npm i eventsource-polyfill -D
     ```
 
     ```js
@@ -89,7 +85,7 @@ app.use(hotMiddleware(compile, {
 3. webpack `loader` configure 
     
     ```sh
-    npm i babel-preset-es2015 babel-preset-stage-0 -D
+    $ npm i babel-preset-es2015 babel-preset-stage-0 -D
     ```
 
     ```js
@@ -104,10 +100,10 @@ app.use(hotMiddleware(compile, {
     }
     ```
 
-    HMR for react project
+    > HMR for react project
 
     ```sh
-    npm i babel-preset-react babel-preset-react-hmre -D
+    $ npm i babel-preset-react babel-preset-react-hmre -D
     ```
 
     ```js
