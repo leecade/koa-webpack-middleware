@@ -1,3 +1,3 @@
-import dev from './devMiddleware'
-import hot from './hotMiddleware'
-export { dev, hot }
+import devMiddleware from './devMiddleware'
+import hotMiddleware from './hotMiddleware'
+export { devMiddleware, hotMiddleware }
