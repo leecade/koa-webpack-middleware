@@ -12,6 +12,14 @@
 $ npm i koa-webpack-middleware -D
 ```
 
+## Depends
+
+This middleware designd for koa2 ecosystem, make sure installed the right version:
+
+```sh
+npm i koa@next -S
+```
+
 ## Usage
 
 > See [example/](./example/) for an example of usage.

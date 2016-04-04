@@ -1,6 +1,6 @@
 {
   "name": "koa-webpack-middleware",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "react",
     "hot",
@@ -50,5 +50,9 @@
       "lib/",
       "example/"
     ]
+  },
+  "dependencies": {
+    "webpack-dev-middleware": "1.6.1",
+    "webpack-hot-middleware": "2.10.0"
   }
 }
