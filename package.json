@@ -1,6 +1,6 @@
 {
   "name": "koa-webpack-middleware",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "react",
     "hot",
@@ -19,8 +19,7 @@
   "scripts": {
     "lint": "standard | snazzy",
     "test": "npm run lint",
-    "build": "npm run lint && babel -d lib/ middleware/",
-    "prepublish": "npm run build"
+    "build": "npm run lint && babel -d lib/ middleware/"
   },
   "repository": {
     "type": "git",
@@ -42,7 +41,7 @@
     "standard": "^7.0.0"
   },
   "peerDependencies": {
-    "koa": ">=2.0.0-alpha.7"
+    "koa": "^2.0.0"
   },
   "standard": {
     "parser": "babel-eslint",
@@ -52,7 +51,7 @@
     ]
   },
   "dependencies": {
-    "webpack-dev-middleware": "1.7.0",
-    "webpack-hot-middleware": "2.12.2"
+    "webpack-dev-middleware": "1.8.4",
+    "webpack-hot-middleware": "2.13.1"
   }
 }
