@@ -9,7 +9,7 @@ export default (compiler, opts) => {
       },
       setHeader: (name, value) => {
         ctx.headers[name] = value
-      },
+      }
     }, next)
   }
 }
