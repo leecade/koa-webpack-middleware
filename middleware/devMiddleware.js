@@ -8,7 +8,7 @@ export default (compiler, opts) => {
         ctx.body = content
       },
       setHeader: (name, value) => {
-        ctx.headers[name] = value;
+        ctx.headers[name] = value
       },
     }, next)
   }

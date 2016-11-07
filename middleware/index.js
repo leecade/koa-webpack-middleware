@@ -1,3 +1,3 @@
 import devMiddleware from './devMiddleware'
 import hotMiddleware from './hotMiddleware'
-export { devMiddleware, hotMiddleware }
+module.exports = { devMiddleware, hotMiddleware }
