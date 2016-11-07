@@ -7,7 +7,9 @@ export default (compiler, opts) => {
       end: (content) => {
         ctx.body = content
       },
-      setHeader: ctx.set.bind(ctx)
+      setHeader: (name, value) => {
+        ctx.headers[name] = value;
+      },
     }, next)
   }
 }

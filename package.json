@@ -42,7 +42,7 @@
     "standard": "^7.0.0"
   },
   "peerDependencies": {
-    "koa": ">=2.0.0"
+    "koa": ">=2.0.0-alpha.7"
   },
   "standard": {
     "parser": "babel-eslint",
@@ -52,7 +52,7 @@
     ]
   },
   "dependencies": {
-    "webpack-dev-middleware": "1.6.1",
-    "webpack-hot-middleware": "2.12.1"
+    "webpack-dev-middleware": "1.7.0",
+    "webpack-hot-middleware": "2.12.2"
   }
 }
