@@ -8,8 +8,8 @@ export default (compiler, opts) => {
     ctx.body = stream
     await expressMiddleware(ctx.req, {
       write: stream.write.bind(stream),
-      writeHead: (state, headers) => {
-        ctx.state = state
+      writeHead: (status, headers) => {
+        ctx.status = status
         ctx.set(headers)
       }
     }, next)
