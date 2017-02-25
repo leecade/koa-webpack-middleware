@@ -41,7 +41,7 @@
     "standard": "^8.5.0"
   },
   "peerDependencies": {
-    "koa": "^2.0.0"
+    "koa": "^2.0.1"
   },
   "standard": {
     "parser": "babel-eslint",
