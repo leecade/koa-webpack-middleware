@@ -1,3 +1,11 @@
+machine:
+  node:
+    version: 4
+dependencies:
+  pre:
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
+  override:
+    - yarn
 deployment:
   npm:
     branch: master
