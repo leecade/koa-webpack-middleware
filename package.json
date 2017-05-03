@@ -53,6 +53,6 @@
   },
   "dependencies": {
     "webpack-dev-middleware": "1.8.4",
-    "webpack-hot-middleware": "2.13.1"
+    "webpack-hot-middleware": "2.13.2"
   }
 }
