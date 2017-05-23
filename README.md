@@ -4,25 +4,26 @@
 [![Circle CI](https://circleci.com/gh/leecade/koa-webpack-middleware.svg)](https://circleci.com/gh/leecade/koa-webpack-middleware)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-[webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) for [koa2](https://github.com/koajs/koa/tree/v2.x) with [HMR](http://webpack.github.io/docs/hot-module-replacement-with-webpack.html)(hot module replacement) supports.
+[webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) for [koa2](https://github.com/koajs/koa/tree/v2.x) with [Hot Module Replacement](http://webpack.github.io/docs/hot-module-replacement-with-webpack.html)(HMR) support.
 
 ## Install
 
+You can install `koa-webpack-middleware` using npm:
 ```sh
 $ npm i koa-webpack-middleware -D
 ```
 
-## Depends
+## Dependencies
 
-This middleware designd for koa2 ecosystem, make sure installed the right version:
+This middleware is designed for the koa2 ecosystem. Make sure that you have installed the correct version:
 
 ```sh
-npm i koa@next -S
+$ npm i koa@next -S
 ```
 
 ## Usage
 
-> See [example/](./example/) for an example of usage.
+See [example/](./example/) for an example of usage.
 
 ```js
 import webpack from 'webpack'
@@ -65,9 +66,9 @@ app.use(hotMiddleware(compile, {
 }))
 ```
 
-## HMR configure
+## HMR Configuration
 
-1. webpack `plugins` configure
+1. Webpack `plugins` configuration
 
     ```js
     plugins: [
@@ -76,7 +77,7 @@ app.use(hotMiddleware(compile, {
         new webpack.NoErrorsPlugin()
     ]
     ```
-2. webpack `entry` configure
+2. Webpack `entry` configuration
 
     ```sh
     $ npm i eventsource-polyfill -D
@@ -92,7 +93,7 @@ app.use(hotMiddleware(compile, {
     },
     ```
 
-3. webpack `loader` configure 
+3. Webpack `loader` configuration 
     
     ```sh
     $ npm i babel-preset-es2015 babel-preset-stage-0 -D
@@ -110,7 +111,7 @@ app.use(hotMiddleware(compile, {
     }
     ```
 
-    > HMR for react project
+    **HMR for a react project:**
 
     ```sh
     $ npm i babel-preset-react babel-preset-react-hmre -D
@@ -132,9 +133,9 @@ app.use(hotMiddleware(compile, {
     }
     ```
 
-4. put the code in your entry file to enable HMR
+4. Copy the code below into your entry file to enable HMR
 
-    > React project do not need
+    **Not needed for a React project!**
 
     ```js
     if (module.hot) {
@@ -142,5 +143,5 @@ app.use(hotMiddleware(compile, {
     }
     ```
 
-That's all, you're all set!
+**That's all, you're all set!**
     
