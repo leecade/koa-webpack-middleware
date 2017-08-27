@@ -4,10 +4,12 @@ import { PassThrough } from 'stream'
 export default (compiler, opts) => {
   const expressMiddleware = hotMiddleware(compiler, opts)
   return async (ctx, next) => {
-    let stream = new PassThrough()
-    ctx.body = stream
+    var stream = new PassThrough()
     await expressMiddleware(ctx.req, {
-      write: stream.write.bind(stream),
+      write: (content) => {
+        ctx.body = stream
+        stream.write(content)
+      },
       writeHead: (status, headers) => {
         ctx.status = status
         ctx.set(headers)
