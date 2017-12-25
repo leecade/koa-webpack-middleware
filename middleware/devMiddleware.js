@@ -4,6 +4,7 @@ export default (compiler, opts) => {
   const expressMiddleware = devMiddleware(compiler, opts)
 
   async function middleware (ctx, next) {
+    ctx.res.locals = ctx.res.locals || {};
     await expressMiddleware(ctx.req, {
       end: (content) => {
         ctx.body = content
