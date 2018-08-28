@@ -3,6 +3,7 @@
 [![npm version](http://img.shields.io/npm/v/koa-webpack-middleware.svg?style=flat-square)](https://npmjs.org/package/koa-webpack-middleware "View this project on npm")
 [![Circle CI](https://circleci.com/gh/leecade/koa-webpack-middleware.svg)](https://circleci.com/gh/leecade/koa-webpack-middleware)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+<a href="https://communityinviter.com/apps/koa-js/koajs" rel="KoaJs Slack Community">![KoaJs Slack](https://img.shields.io/badge/Koa.Js-Slack%20Channel-Slack.svg?longCache=true&style=for-the-badge)</a>
 
 [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) for [koa2](https://github.com/koajs/koa/tree/v2.x) with [HMR](http://webpack.github.io/docs/hot-module-replacement-with-webpack.html)(hot module replacement) supports.
 
