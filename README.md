@@ -20,6 +20,10 @@ This middleware designd for koa2 ecosystem, make sure installed the right versio
 npm i koa@next -S
 ```
 
+Because we have made an intermediate adaptation for a specific version of middleware, please check the version of middleware you are using
+
+For example, the response method used by [devMiddleware v4.0.0-rc.1](https://github.com/webpack/webpack-dev-middleware/blob/v4.0.0-rc.1/src/middleware.js) has changed
+
 ## Usage
 
 > See [example/](./example/) for an example of usage.
