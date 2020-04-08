@@ -8,9 +8,9 @@ export default (compiler, opts) => {
       end: (content) => {
         ctx.body = content
       },
-      setHeader: (name, value) => {
-        ctx.set(name, value)
-      }
+      locals: ctx.state,
+      getHeader: ctx.get.bind(ctx),
+      setHeader: ctx.set.bind(ctx)
     }, next)
   }
 
