@@ -5,9 +5,14 @@ export default (compiler, opts) => {
   const expressMiddleware = hotMiddleware(compiler, opts)
   return async (ctx, next) => {
     let stream = new PassThrough()
-    ctx.body = stream
+    // Set ctx.body in the middleware, 
+    // otherwise the browser will download a unkown file
     await expressMiddleware(ctx.req, {
-      write: stream.write.bind(stream),
+      end: stream.end.bind(stream),
+      write: content => {
+        if (!ctx.body) ctx.body = stream
+        return stream.write(content)
+      },
       writeHead: (status, headers) => {
         ctx.status = status
         ctx.set(headers)
