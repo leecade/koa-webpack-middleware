@@ -14,7 +14,7 @@ export default (compiler, opts) => {
         ctx.status = status
         ctx.set(headers)
       },
-      res: noop
+      end: noop
     }, next)
   }
 }
