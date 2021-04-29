@@ -1,6 +1,8 @@
 import hotMiddleware from 'webpack-hot-middleware'
 import { PassThrough } from 'stream'
 
+const noop = () => {}
+
 export default (compiler, opts) => {
   const expressMiddleware = hotMiddleware(compiler, opts)
   return async (ctx, next) => {
@@ -11,7 +13,8 @@ export default (compiler, opts) => {
       writeHead: (status, headers) => {
         ctx.status = status
         ctx.set(headers)
-      }
+      },
+      res: noop
     }, next)
   }
 }
